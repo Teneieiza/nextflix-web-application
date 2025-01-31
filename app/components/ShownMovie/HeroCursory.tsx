@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-export default function CursoryMovie() {
+export default function HeroCursory() {
   return (
     <div className="flex flex-col items-center gap-y-4 md:items-start md:gap-y-6">
       <Image
