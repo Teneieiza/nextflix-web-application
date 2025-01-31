@@ -44,3 +44,13 @@ body {
     @apply text-base xl:text-lg 2xl:text-[22px];
   }
 }
+
+@layer components {
+  /* hide-scroll */
+  .hide-scroll {
+    scrollbar-width: none;
+  }
+  .hide-scroll::-webkit-scrollbar {
+    display: none;
+  }
+}
