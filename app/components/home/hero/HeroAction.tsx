@@ -16,7 +16,7 @@ export default function HeroAction() {
         <p className="font-bold">My List</p>
       </div>
 
-      <button className="flex h-full items-center gap-2 rounded-md bg-white px-6 py-2 font-bold text-black md:gap-4 md:text-2xl xl:py-3 xl:text-2xl 2xl:text-[40px]">
+      <button className="flex h-full items-center gap-2 rounded-md bg-white px-6 py-2 font-bold text-black md:gap-4 md:text-2xl xl:py-3 xl:text-2xl">
         <Image
           src="/button/playicon.svg"
           alt="playicon"
@@ -27,7 +27,7 @@ export default function HeroAction() {
         Play
       </button>
 
-      <button className="hidden h-full items-center gap-4 rounded-md bg-gray-600 px-6 py-2 font-black text-white opacity-50 md:flex md:text-lg xl:py-3 xl:text-xl 2xl:text-[30px]">
+      <button className="hidden h-full items-center gap-4 rounded-md bg-gray-600 px-6 py-2 font-black text-white opacity-50 md:flex md:text-lg xl:py-3 xl:text-xl">
         <Image
           src="/button/infoicon.svg"
           alt="infoicon"

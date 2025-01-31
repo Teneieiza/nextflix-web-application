@@ -2,13 +2,13 @@ import Image from 'next/image'
 
 export default function HeroCursory() {
   return (
-    <div className="flex flex-col items-center gap-y-4 md:items-start md:gap-y-6">
+    <div className="flex flex-col items-center gap-y-2 md:items-start md:gap-y-3 xl:gap-y-4">
       <Image
         src="/main/nserieoriginal.svg"
         alt="nserieoriginallogo"
         width={257}
         height={64}
-        className="w-[30vw] max-w-[80px] md:max-w-[130px] lg:max-w-[160px] xl:max-w-[180px] 2xl:max-w-[220px]"
+        className="w-[30vw] max-w-[80px] md:max-w-[100px] lg:max-w-[120px] xl:max-w-[140px]"
         priority
       />
       <Image
@@ -16,7 +16,7 @@ export default function HeroCursory() {
         alt="showlogo"
         width={878}
         height={242}
-        className="w-[60vw] md:max-w-[400px] lg:max-w-[500px] 2xl:max-w-[878px]"
+        className="w-[60vw] md:max-w-[350px] lg:max-w-[400px] xl:max-w-[450px]"
         priority
       />
 
@@ -32,7 +32,7 @@ export default function HeroCursory() {
         <p>Based on Books</p>
       </div>
 
-      <div className="flex flex-col items-center md:items-start md:gap-y-6">
+      <div className="flex flex-col items-center md:items-start md:gap-y-4">
         <div className="hidden items-center gap-2 md:flex">
           <Image
             src="/main/top10.svg"
@@ -42,11 +42,11 @@ export default function HeroCursory() {
             className="w-[3vw] max-w-[30px]"
             priority
           />
-          <p className="font-bold md:text-2xl xl:text-3xl 2xl:text-[43px]">
+          <p className="font-bold md:text-2xl xl:text-3xl">
             #1 in TV Shows Today
           </p>
         </div>
-        <p className="hidden max-w-[90%] text-justify text-sm md:block md:max-w-[600px] md:text-lg xl:text-xl 2xl:max-w-[850px] 2xl:text-4xl">
+        <p className="hidden max-w-[90%] text-justify text-sm md:block md:max-w-[600px] md:text-lg xl:text-xl 2xl:max-w-[850px]">
           Determined to protect a young patient who escaped a mysterious cult, a
           psychiatrist takes the girl in, putting her own family — and life — in
           danger.
