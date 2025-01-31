@@ -4,18 +4,43 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #000000;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #000000;
     --foreground: #ededed;
   }
 }
 
+@font-face {
+  font-family: 'Netflix Sans';
+  font-weight: 400;
+  font-display: optional;
+  src:
+    url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Th.woff2)
+      format('woff2'),
+    url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Th.woff)
+      format('woff');
+}
+
 body {
+  min-height: 100vh;
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Netflix Sans', sans-serif;
+}
+
+@layer base {
+  * {
+    @apply m-0 box-border p-0;
+  }
+  p {
+    @apply text-base md:text-lg 2xl:text-[22px];
+  }
+
+  li {
+    @apply text-base xl:text-lg 2xl:text-[22px];
+  }
 }
