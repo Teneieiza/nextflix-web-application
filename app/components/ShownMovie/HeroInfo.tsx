@@ -1,0 +1,13 @@
+import HeroAction from './HeroAction'
+import HeroCursory from './HeroCursory'
+
+export default function HeroInfo() {
+  return (
+    <div className="absolute -bottom-8 left-1/2 flex w-[300px] -translate-x-1/2 flex-col gap-8 md:left-10 md:top-28 md:w-[400px] md:translate-x-0 lg:w-[500px] xl:left-14 xl:top-32 2xl:left-20 2xl:top-60 2xl:w-[878px]">
+      <div className="relative z-10 flex w-full max-w-[900px] flex-col items-center text-center md:items-start md:gap-y-6 md:text-left">
+        <HeroCursory />
+        <HeroAction />
+      </div>
+    </div>
+  )
+}
