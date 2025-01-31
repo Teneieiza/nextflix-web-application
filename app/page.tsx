@@ -12,7 +12,7 @@ export default function HomePage() {
       </section>
 
       {/* MovieSnap Section */}
-      <section className="w-full relative">
+      <section className="relative w-full">
         <MovieSnap />
       </section>
     </div>
