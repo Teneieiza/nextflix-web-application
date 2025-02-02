@@ -1,11 +1,40 @@
 'use client'
-import { images } from '@/app/constants/MovieMockData'
 import Image from 'next/image'
 import { useState, useEffect, useRef } from 'react'
+import UseGenreData from '@/app/hook/UseGenreData'
 
 export default function MovieSnap() {
   const containerRef = useRef<HTMLDivElement>(null)
   const [itemsPerView, setItemsPerView] = useState<number>(6)
+
+  // useEffect(() => {
+  //   const fetchMovies = async () => {
+  //     try {
+  //       const response = await axios.get<GenreType>(
+  //         `${process.env.NEXT_PUBLIC_PORT}/genre/1365`,
+  //       )
+  //       const movieData = response.data.datas.flatMap((category: Category) =>
+  //         category.films.map((film: Film) => film.image),
+  //       )
+  //       setFilms(movieData)
+  //     } catch (error) {
+  //       console.error('Error fetching movies:', error)
+  //     }
+  //   }
+
+  //   fetchMovies()
+  // }, [])
+
+  const { films } = UseGenreData()
+
+  // useEffect(() => {
+  //   const loadMovies = async () => {
+  //     const movieData = await fetchMovies();
+  //     setFilms(movieData);
+  //   };
+
+  //   loadMovies();
+  // }, []);
 
   useEffect(() => {
     const updateItemsPerView = () => {
@@ -21,7 +50,7 @@ export default function MovieSnap() {
     return () => window.removeEventListener('resize', updateItemsPerView)
   }, [])
 
-  const groupedImages = images.reduce((acc, img, index) => {
+  const groupedImages = films.reduce((acc, img, index) => {
     const groupIndex = Math.floor(index / itemsPerView)
     if (!acc[groupIndex]) acc[groupIndex] = []
     acc[groupIndex].push(img)
