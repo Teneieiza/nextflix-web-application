@@ -1,5 +1,6 @@
 import Image from 'next/image'
-import { navigationData } from '../constants/NavigationData'
+import { navigationData } from '@/app/constants/NavigationData'
+import Categorie from './Categorie'
 
 export default function NavigationBar() {
   return (
@@ -45,15 +46,17 @@ export default function NavigationBar() {
                 key={index}
                 className={item.mobile ? 'block' : 'hidden xl:block'}
               >
-                <a href={item.link}>{item.message}</a>
+                <a href={item.link} className="hover:text-gray-300">
+                  {item.message}
+                </a>
               </li>
             ))}
             <li className="md:hidden">
-              <p>Categories</p>
+              <Categorie customClassName="right-0" />
             </li>
           </ul>
           <div className="hidden md:block xl:hidden">
-            <p>Categories</p>
+            <Categorie customClassName="left-0" />
           </div>
         </div>
         <div className="hidden items-center justify-center gap-[15px] md:flex">
