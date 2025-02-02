@@ -33,7 +33,7 @@ export default function HeroAction() {
           alt="infoicon"
           width={25}
           height={25}
-          className="h-[3vw] max-h-[35px]"
+          className="h-[4vw] max-h-[35px]"
         />
         More Info
       </button>
