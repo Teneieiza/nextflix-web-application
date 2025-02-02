@@ -12,7 +12,8 @@ export default function HomePage() {
       </section>
 
       {/* MovieSnap Section */}
-      <section className="relative w-full">
+      <section className="relative w-full pt-20">
+        <p className="px-[4%]">Popular on Netflix</p>
         <MovieSnap />
       </section>
     </div>
